@@ -4,7 +4,6 @@ Stereo DSO
 
 ---
 Stereo DSO is a real-time stereo SLAM system based on DSO. It is developed by members of Autonomous Driving Group at Horizon Robotics, Inc. It runs on laptops with CPU and provides localization and mapping services for self-driving cars. A demonstration is provides to showcase its capability.
-
 ### **Authors:** [Jiatian WU](https://github.com/JiatianWu), [Degang YANG](https://github.com/yangdegang), [Qinrui YAN](https://github.com/castoryan), [Shixin LI](https://github.com/MaidouPP)
 ### **Videos:** https://youtu.be/JZ0JRrGA6Kc
 ### **Related Papers:** 
@@ -67,28 +66,28 @@ Below is the trajectory that DSO runs on Kitti 05. We can see that the scale of 
 
 Stereo DSO can achieve much better accuracy and faster speed:
 
-![05sdso](http://ovms74foj.bkt.clouddn.com/05sdso.png?imageView2/0/w/400/h/400)
+![05sdso](http://ovms74foj.bkt.clouddn.com/05sdso.png?imageView2/0/w/402/h/400)
 
-It is evaluated that stereo DSO achieves about 1.1% ~ 4.2% translation error, 0.001deg/m ~ 0.0053deg/m rotation error, with running time of 63ms per frame.
+It is evaluated that stereo DSO achieves about 1.1% ~ 4.2% translation error, 0.001deg/m ~ 0.0053deg/m rotation error, with running time of 53ms per frame.
 
-![05tl](http://ovms74foj.bkt.clouddn.com/05_tl.png)
+![05tl](http://ovms74foj.bkt.clouddn.com/05_tl.png?imageView2/0/w/402/h/400)
 
-![05rl](http://ovms74foj.bkt.clouddn.com/05_rl.png)
+![05rl](http://ovms74foj.bkt.clouddn.com/05_rl.png?imageView2/0/w/402/h/400)
 
 We also tested stereo DSO on Kitti 00.
-It achieves about 1.3% ~ 3.7% translation error, 0.002 deg/m ~ 0.007deg/m rotation error, with running time of 86ms per frame. 
+It achieves about 1.3% ~ 3.7% translation error, 0.002 deg/m ~ 0.007deg/m rotation error, with running time of 56ms per frame. 
 
-![00sdso](http://ovms74foj.bkt.clouddn.com/00.png?imageView2/0/w/400/h/400)
+![00sdso](http://ovms74foj.bkt.clouddn.com/00.png?imageView2/0/w/402/h/402)
 
-![00tl](http://ovms74foj.bkt.clouddn.com/00_tl.png)
+![00tl](http://ovms74foj.bkt.clouddn.com/00_tl.png?imageView2/0/w/402/h/400)
 
-![00rl](http://ovms74foj.bkt.clouddn.com/00_rl.png)
+![00rl](http://ovms74foj.bkt.clouddn.com/00_rl.png?imageView2/0/w/402/h/400)
 
 In conlcusion, stereo DSO have several advantages comparing with DSO:
 
 - No need to initialize. Stereo DSO initializes immediately.
 - Much better scale and accuracy. DSO performs bad on kitti dataset, especially in scale measurements. Stereo DSO reduced the translation and rotation error largely.
-- Real-time speed. Stereo DSO runs at typically 15 frames per sec.
+- Real-time speed. Stereo DSO runs at typically 20 frames per sec.
 - Robustness. Stereo DSO seldomly gets lost, but DSO usually fails to initialize if the movement during initialization is not large enough.
 #### 5. Acknowledgements
 Stereo DSO is developed at Horizon Robotics, Inc. Our work is based on [DSO](https://github.com/JakobEngel/dso).
