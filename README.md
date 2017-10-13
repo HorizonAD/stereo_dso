@@ -22,7 +22,7 @@ Run on a dataset from [http://www.cvlibs.net/datasets/kitti/eval_odometry.php](h
 			vignette=XXXXX/sequence_XX/para/vignette.png \
 			preset=0 \
 			mode=1
-Under sequence_XX, there should be two image datasets called image_0 and image_1, which are left and right image sets. Note that mode is set to 1 because we do not have photometric calibration. Besdies, gamma and vignette are not required to run the code. That is, a minimal exampel to run on a kitti dataset is:
+Under sequence_XX, there should be two image datasets called image_0 and image_1, which are left and right image sets. Note that mode is set to 1 because we do not have photometric calibration. Besides, gamma and vignette are not required to run the code. That is, a minimal exampel to run on a kitti dataset is:
 
 		bin/dso_dataset \
 			files=XXXXX/sequence_XX \
