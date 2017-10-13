@@ -13,6 +13,22 @@ Stereo DSO is a real-time stereo SLAM system based on DSO. It is developed by me
 Please follow https://github.com/JakobEngel/dso.
 ### 2. Usage
 See https://github.com/JakobEngel/dso for how to run on a dataset. 
+Run on a dataset from [http://www.cvlibs.net/datasets/kitti/eval_odometry.php](http://www.cvlibs.net/datasets/kitti/eval_odometry.php) using:
+
+		bin/dso_dataset \
+			files=XXXXX/sequence_XX \
+			calib=XXXXX/sequence_XX/para/camera.txt \
+			gamma=XXXXX/sequence_XX/para/pcalib.txt \
+			vignette=XXXXX/sequence_XX/para/vignette.png \
+			preset=0 \
+			mode=1
+Under sequence_XX, there should be two image datasets called image_0 and image_1, which are left and right image sets. Note that mode is set to 1 because we do not have photometric calibration. Besdies, gamma and vignette are not required to run the code. That is, a minimal exampel to run on a kitti dataset is:
+
+		bin/dso_dataset \
+			files=XXXXX/sequence_XX \
+			calib=XXXXX/sequence_XX/para/camera.txt \
+			preset=0 \
+			mode=1
 #### 2.1 Dataset Format
 All the dataset format is same as DSO except the calib file. The format of  geometric calibration file is slightly different because of the involved stereo disparity.
 ##### Geometric Calibration File.
