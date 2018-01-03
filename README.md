@@ -30,7 +30,7 @@ Under sequence_XX, there should be two image datasets called image_0 and image_1
 			preset=0 \
 			mode=1
 #### 2.1 Dataset Format
-All the dataset format is same as DSO except the calib file. The format of  geometric calibration file is slightly different because of the involved stereo disparity.
+All the dataset format is same as DSO except the calib file. The format of  geometric calibration file is slightly different because of the involved stereo baseline.
 ##### Geometric Calibration File.
 ###### Calibration File for Pre-Rectified Images
 
@@ -38,7 +38,7 @@ All the dataset format is same as DSO except the calib file. The format of  geom
     in_width in_height
     "crop" / "full" / "none" / "fx fy cx cy 0"
     out_width out_height
-    disparity
+    baseline
 
 ###### Calibration File for FOV camera model:
 
@@ -46,7 +46,7 @@ All the dataset format is same as DSO except the calib file. The format of  geom
     in_width in_height
     "crop" / "full" / "fx fy cx cy 0"
     out_width out_height
-    disparity
+    baseline
 
 
 ###### Calibration File for Radio-Tangential camera model
@@ -55,7 +55,7 @@ All the dataset format is same as DSO except the calib file. The format of  geom
     in_width in_height
     "crop" / "full" / "fx fy cx cy 0"
     out_width out_height
-    disparity
+    baseline
 
 
 ###### Calibration File for Equidistant camera model
@@ -64,8 +64,8 @@ All the dataset format is same as DSO except the calib file. The format of  geom
     in_width in_height
     "crop" / "full" / "fx fy cx cy 0"
     out_width out_height
-    disparity
-note: `disparity` is in meters.
+    baseline
+note: `baseline` is in meters.
 #### 2.2 Run Mode 
 Two modes `MODE_SLAM` and `MODE_STEREOMATCH` can be set in `main_dso_pangolin.cpp`. If `MODE_STEREOMATCH` is true, it will do stereo matching and output the idepth map given a pair of stereo images.
 #### 3. Pipeline
